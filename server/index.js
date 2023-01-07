@@ -17,6 +17,8 @@ mongoose.connect(process.env.MONGODB_URL, ()=>{
 
 // api routes starts here
 
+
+// signup api starts here
 app.post('/signup', async (req, res) => {
     const { name, phone, email, password, role } = req.body;
 
@@ -75,7 +77,38 @@ app.post('/signup', async (req, res) => {
         data: savedUser
     })
 })
+// signup api ends here
 
+
+//  login api starts here
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+
+    if(!email || !password) {
+        return res.json({
+            success: false,
+            message: "Email and password are required"
+        })
+    }
+
+    const existingUser = await User.findOne({ email: email, password: password });
+    
+    if(existingUser){
+        return res.json({
+            success: true,
+            message: "Login successful",
+            data: existingUser
+        })
+    }
+    else
+    {
+        return res.json({
+            success: false,
+            message: "Invalid email or password"
+        })
+    }
+})
+//  login api starts here
 
 
 
