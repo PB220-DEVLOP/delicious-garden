@@ -1,11 +1,11 @@
 import { Schema, model } from "mongoose";
 
 const tableSchema = new Schema({
-  : Number,
-  occupied: Boolean,
-  occupiedBy: {
+  tableNumber : Number,
+  occupied : Boolean,
+  occupiedBy : {
     type: Schema.Types.ObjectId,
-    ref: "User"
+    ref : "User"
   }
 })
 
