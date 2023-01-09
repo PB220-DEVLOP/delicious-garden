@@ -6,6 +6,7 @@ dotenv.config();
 
 import User from './models/User.js';
 import FoodItem from './models/FoodItem.js';
+import Table from './models/Table.js';
 
 
 const app = express();
@@ -166,8 +167,30 @@ app.get("/foodItemsbytitle", async(req, res)=>{
     })
 })
 
+// Create Table api starts here
+app.post("/createTable", async(req,res)=>{
+    const {tableNumber} = req.body;
 
+    const existingTable =  await Table.findOne({ tableNumber : tableNumber });
+    if(existingTable){ 
+        return res.json({
+        success : true,
+        message : "Table already exists..."
+    })
+}
+    const table = new Table({
+        tableNumber : tableNumber,
+        occupied : false
+    })
 
+    const savedTable = await table.save();
+       
+    res.json({
+        success : true,
+        message : "Table created successfully"
+    })
+})
+// Create Table ends here
 
 
 // api routes ends here
