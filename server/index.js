@@ -276,6 +276,19 @@ app.post("/orderFoodItems", async(req, res) => {
 })
 // Order fooditem api ends here
 
+// http://localhost:5000/order?orderId=1   (get)
+app.get("/order", async(req, res)=>{
+    const {orderId} = req.query;
+  
+    const order = await Order.findOne({orderId: orderId});
+  
+      res.json({
+          success: true,
+          message: "Order fetched successfully",
+          data: order
+      })
+  })
+// order end here.
 
 
 // api routes ends here
