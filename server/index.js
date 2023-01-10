@@ -192,6 +192,32 @@ app.post("/createTable", async(req,res)=>{
 })
 // Create Table ends here
 
+//  table alredy occupied or present api starts here
+app.post("/bookTable", async (req, res) => {
+    const { tableNumber, userId } = req.body;
+
+    const existingTable = await Table.findOne({ tableNumber: tableNumber });
+    if (existingTable && existingTable.occupied) {
+        return res.json({
+            success: false,
+            message: "Table already occupied"
+        })
+    }
+
+    if(existingTable){
+        existingTable.occupied = true;
+        existingTable.occupiedBy = userId;
+        await existingTable.save();
+    }
+
+    res.json({
+        success: true,
+        message: "Table booked successfully",
+        data: existingTable
+    })
+})
+//  table alredy occupied or present api ends here
+
 
 // api routes ends here
 
