@@ -290,6 +290,19 @@ app.get("/order", async(req, res)=>{
   })
 // order end here.
 
+// http://localhost:5000/ordersByUserId?userId=63b6...... (get)
+app.get("/ordersByUserId", async(req, res) => {
+    const {userId} = req.query;
+    const orders = await Order.find({userId: userId});
+
+    res.json({
+        success: true,
+        message: "Orders fetched successfully",
+        data: orders
+    })
+});
+// ordersbyuserid api end here.
+
 
 // api routes ends here
 
