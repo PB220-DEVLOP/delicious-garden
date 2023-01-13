@@ -1,5 +1,6 @@
 import React from "react";
 import "./Signup.css";
+import {Link} from 'react-router-dom'
 
 
 function Signup() {
@@ -14,31 +15,34 @@ function Signup() {
 
        <div className='col-md-6'>
         <div className='form-container'>
-          <h3 className="text-center heading ">
-            Delicious garden</h3>
+          <h3 className="text-center heading">Delicious Garden</h3>
           <form>
            <div>
-              <label htmlFor='name' className="labels">Full Name : </label>
-              <input type='text' id='name' placeholder='Enter Name' className='user-input'/>
+              <label htmlFor='name'> </label>
+              <input type='text' id='name'  placeholder='Enter Your FullName'  className='user-input'/>
            </div>
 
            <div>
-              <label htmlFor='email' className="labels">Email : </label>
-              <input type='email' id='email' placeholder='Enter Email' className='user-input'/>
+              <label htmlFor='email'> </label>
+              <input type='email' id='email' placeholder='Enter Your Email' className='user-input'/>
            </div>
 
            <div>
-              <label htmlFor='phone' className="labels">Phone : </label>
-              <input type='text' id='phone' placeholder='Enter Phone' className='user-input'/>
+              <label htmlFor='phone'> </label>
+              <input type='text' id='phone' placeholder='Enter Your Phone' className='user-input'/>
            </div>
 
            <div>
-              <label htmlFor='password' className="labels">Password : </label>
-              <input type='password' id='password' placeholder='Enter Password' className='user-input'/>
+              <label htmlFor='password'> </label>
+              <input type='password' id='password' placeholder='Enter Your Password' className='user-input'/>
            </div>
 
             <div>
               <button type='button' className='signup-button '>Signup</button>
+            </div>
+            <div className="already-login-container">
+              <span>Already have an acount ? 
+              <button className="already-login"> <Link to='./../Login'> Log in here...</Link></button></span>
             </div>
           </form>
         </div>
