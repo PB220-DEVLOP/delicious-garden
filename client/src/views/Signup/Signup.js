@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import axios from 'axios';
 import "./Signup.css";
 import {Link} from 'react-router-dom';
@@ -11,6 +11,13 @@ function Signup() {
   const [phone, setPhone] = useState('')
   const [password, setPassword] = useState('')
   const [role, setRole] = useState('user')
+
+  useEffect(()=>{
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    if(currentUser){
+      window.location.href="/"
+    }
+  }, [])
 
   async function signupUser(){
     const response = await axios.post('/signup',{
