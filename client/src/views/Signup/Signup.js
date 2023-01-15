@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from "react";
 import axios from 'axios';
-import "./Signup.css";
 import {Link} from 'react-router-dom';
 
-
+import { currentUser } from "../../util/currentUser";
+import "./Signup.css";
 
 function Signup() {
   const [name, setName] = useState('')
@@ -13,7 +13,6 @@ function Signup() {
   const [role, setRole] = useState('user')
 
   useEffect(()=>{
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
     if(currentUser){
       window.location.href="/"
     }

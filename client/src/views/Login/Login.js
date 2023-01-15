@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
+import { currentUser } from "../../util/currentUser";
 import './Login.css';
 
 function Login() {
@@ -9,7 +10,6 @@ function Login() {
   const [password, setPassword] = useState('')
 
   useEffect(()=>{
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
     if(currentUser){
       window.location.href="/"
     }

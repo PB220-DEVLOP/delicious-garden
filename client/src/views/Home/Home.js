@@ -1,15 +1,7 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react';
+import { currentUser } from '../../util/currentUser';
 
 function Home() {
-  const [currentUser, setCurentUser] = useState({})
-
-  useEffect(()=>{
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
-    console.log(currentUser)
-    if(currentUser){
-      setCurentUser(currentUser)
-    }
-  }, [])
   return (
     <>
     <div>Home Component</div>
