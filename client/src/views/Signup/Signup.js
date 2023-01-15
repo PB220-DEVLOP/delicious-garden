@@ -82,9 +82,9 @@ function Signup() {
             <div>
               <button type='button' className='signup-button' onClick={signupUser}>Signup</button>
             </div>
-            <div className="already-login-container">
+            <div className="already-login-btn-container">
               <span>Already have an acount ? 
-              <button className="already-login"> <Link to='./../Login'> Log in here...</Link></button></span>
+              <button className="already-login-btn"> <Link to='./../Login'> Log in here...</Link></button></span>
             </div>
           </form>
         </div>

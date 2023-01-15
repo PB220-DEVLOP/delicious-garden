@@ -37,12 +37,8 @@
    border-bottom: 1px solid black;
    font-size: 25px;
    padding-left: 4px;
-   background: linear-gradient( black , #0f1929);
-   -webkit-background-clip: text;
   }
-  .user-input:Active{
 
-  }
   .signup-button{
     font-size: 25px;
     background-color: #f5a209;
@@ -64,7 +60,7 @@
     box-shadow: 0 0 0px 0 black;
   }
 
- .already-login-container{
+ .already-login-btn-container{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -72,7 +68,7 @@
   font-size: 17px;
  }
 
-.already-login,a{
+.already-login-btn,a{
   box-sizing: border-box;
   padding: 0;
   border: none;
@@ -81,7 +77,3 @@
   text-decoration: none;
   padding: 2px 1px 0;
 }
-
-
-
-
