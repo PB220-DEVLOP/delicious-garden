@@ -1,6 +1,7 @@
 import React from 'react';
 import { currentUser } from '../../util/currentUser';
 
+
 function Home() {
   function LogOut(){
     localStorage.removeItem('currentUser');
