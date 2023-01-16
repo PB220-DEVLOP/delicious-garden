@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 
+import FoodItemCard from '../../components/FoodItemCard/FoodItemCard';
 import { currentUser } from '../../util/currentUser';
 import './Home.css';
 
@@ -55,14 +56,18 @@ function Home() {
     </div>
 
     <div className="food-Iems-result">
+      <div className='row'>
       {
         currentFoodItems?.map((foodItem)=>{
-          return(<>
-            <h1>{foodItem.title}</h1>
-            </>
-        )
+          return(<FoodItemCard 
+            category={foodItem.category} 
+            title={foodItem.title} 
+            description={foodItem.description} 
+            imgUrl={foodItem.imgUrl} 
+            price={foodItem.price} />)
         })
       }
+      </div>
     </div>
 
     <button type="button" className="btn btn-primary" onClick={LogOut}>Logout</button>

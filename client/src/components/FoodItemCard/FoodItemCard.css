@@ -1,0 +1,17 @@
+.food-item-card{
+    margin: 5px;
+    border: 1px solid grey;
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 0 2px 0 black;
+}
+
+.food-item-card-header-img{
+    height:200px;
+    width: 200px;
+    margin: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
