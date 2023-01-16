@@ -112,9 +112,9 @@ app.post('/login', async (req, res) => {
         })
     }
 })
-//  login api starts here
+//  login api ends here
 
-
+// Create food item api starts here
 app.post("/createFoodItem", async(req,res)=>{
     const {title, description,imgUrl,price,category} = req.body;
     
@@ -134,6 +134,7 @@ app.post("/createFoodItem", async(req,res)=>{
         data: savedFoodItem
     })
 })
+// Create food item api ends here
 
 
 // Food item Search by category
@@ -167,6 +168,18 @@ app.get("/foodItemsbytitle", async(req, res)=>{
         data: foodItems
     })
 })
+
+// All food item fetching api starts here
+app.get("/allFoodItems", async(req, res)=>{
+    const foodItems = await FoodItem.find()
+
+    res.json({
+        success: true,
+        message: "Food Items fetched successfully",
+        data: foodItems
+    })
+})
+// All food item fetching api ends here
 
 // Create Table api starts here
 app.post("/createTable", async(req,res)=>{
