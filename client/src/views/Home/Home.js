@@ -2,13 +2,17 @@ import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 
 import FoodItemCard from '../../components/FoodItemCard/FoodItemCard';
+import Navbar from '../../components/Navbar/Navbar';
+
 import { currentUser } from '../../util/currentUser';
+import { myFoodListCount } from '../../util/myList';
 import './Home.css';
 
 function Home() {
 
   const [searchText,setSearchText] =  useState('')
   const [currentFoodItems,setAllFooditems] = useState([])
+  const [foodItemCount, setFoodItemCount] = useState(0)
 
   async function fetchAllItem(){
     const response = await axios.get('/allFoodItems')
@@ -46,8 +50,7 @@ function Home() {
 
   return (
     <div>
-    <h1 className='text-center'>Home</h1>
-    <h2>{currentUser?.name}</h2>
+    <Navbar user={currentUser?.name} foodItemCount={foodItemCount}/>
 
     <div className="search-container">
       <input type="text" placeholder='search' 
