@@ -5,6 +5,7 @@ import FoodItemCard from '../../components/FoodItemCard/FoodItemCard';
 import Navbar from '../../components/Navbar/Navbar';
 
 import { currentUser } from '../../util/currentUser';
+import { loginRequired } from '../../util/loginRequired';
 import { myFoodListCount } from '../../util/myList';
 import './Home.css';
 
@@ -43,10 +44,9 @@ function Home() {
     window.location.href = "/login"
   }
 
-  if(!currentUser){
-    alert('Login is required')
-    window.location.href = "/login"
-  }
+  useEffect(() => {
+    loginRequired()
+  }, [])
 
   return (
     <div>
