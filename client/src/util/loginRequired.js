@@ -1,6 +1,6 @@
-import swal from 'sweetalert'
+import swal from "sweetalert";
 
-import { currentUser } from './currentUser'
+import { currentUser } from "./currentUser";
 
 export async function loginRequired() {
   if (!currentUser) {
@@ -10,7 +10,7 @@ export async function loginRequired() {
       icon: "warning",
       buttons: true,
       dangerMode: true,
-    })
-    window.location.href = '/login'
+    });
+    window.location.href = "/login";
   }
 }

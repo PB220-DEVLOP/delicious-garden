@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './FoodItemCard.css';
-import swal from 'sweetalert'
+import swal from 'sweetalert';
 
 function FoodItemCard({category,description,imgUrl,price,title}) {
   
@@ -38,7 +38,7 @@ function FoodItemCard({category,description,imgUrl,price,title}) {
             <span>{category}</span>
 
             <div className='quantity-btn-container'>
-          <span className='qnt-btn' onClick={(e)=>{setQuantity(quantity-1)}}>-</span>
+          <span className='qnt-btn' onClick={(e)=> {quantity - 1 && setQuantity(quantity - 1);}}>-</span>
           <span className='qnt-text'>{quantity}</span>
           <span className='qnt-btn' onClick={(e)=>{setQuantity(quantity+1)}}>+</span>
         </div>
