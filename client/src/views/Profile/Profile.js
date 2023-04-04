@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 
 import { loginRequired } from "../../util/loginRequired";
-import "./MyOrders.css";
+import "./Profile.css";
 
-function MyOrders() {
+function Profile() {
   useEffect(() => {
     loginRequired();
   }, []);
 
   return (
-  <div>MyOrders</div>
+  <div>Profile</div>
   );
 }
 
-export default MyOrders;
+export default Profile;

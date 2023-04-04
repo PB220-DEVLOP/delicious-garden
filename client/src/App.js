@@ -6,6 +6,7 @@ import Login from './views/Login/Login';
 import Signup from './views/Signup/Signup';
 import BookTable from './views/BookTable/BookTable';
 import MyOrders from './views/MyOrders/MyOrders';
+import Profile from './views/Profile/Profile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/BookTable" element={<BookTable/>}/>
         <Route path="/MyOrders" element={<MyOrders/>}/>
+        <Route path="/Profile" element={<Profile/>}/>
        </Routes>
       </BrowserRouter>
     </div>
