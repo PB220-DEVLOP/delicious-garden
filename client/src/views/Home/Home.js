@@ -53,7 +53,7 @@ function Home() {
     <Navbar user={currentUser?.name} foodItemCount={foodItemCount}/>
 
     <div className="search-container">
-      <input type="text" placeholder='search your favourite food item' 
+      <input type="text" placeholder='Type to search your favourite food item' 
       className='input-search' value={searchText}
       onChange={(e)=> setSearchText(e.target.value)} />
     </div>
