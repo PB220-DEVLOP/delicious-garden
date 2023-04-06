@@ -17,8 +17,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/BookTable" element={<BookTable/>}/>
-        <Route path="/MyOrders" element={<MyOrders/>}/>
-        <Route path="/Profile" element={<Profile/>}/>
+        <Route path="/myList" element={<myList />} />
+        <Route path="/MyOrders" element={<MyOrders />} />
+        <Route path="/Profile" element={<Profile />} />
        </Routes>
       </BrowserRouter>
     </div>

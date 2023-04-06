@@ -6,14 +6,12 @@ import Navbar from '../../components/Navbar/Navbar';
 
 import { currentUser } from '../../util/currentUser';
 import { loginRequired } from '../../util/loginRequired';
-import { myFoodListCount } from '../../util/myList';
 import './Home.css';
 
 function Home() {
 
   const [searchText,setSearchText] =  useState('')
   const [currentFoodItems,setAllFooditems] = useState([])
-  const [foodItemCount, setFoodItemCount] = useState(0)
 
   async function fetchAllItem(){
     const response = await axios.get('/allFoodItems')
@@ -50,7 +48,7 @@ function Home() {
 
   return (
     <div>
-    <Navbar user={currentUser?.name} foodItemCount={foodItemCount}/>
+    <Navbar user={currentUser?.name} />
 
     <div className="search-container">
       <input type="text" placeholder='Type to search your favourite food item' 
