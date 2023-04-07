@@ -28,10 +28,10 @@ function MyList() {
       <div className="my-list-container">
         {myFoodListItems.map((item, index) => {
           return (
-            <div>
-              <h6>Name: {item.name}</h6>
-              <h6>Quantity: {item.quantity}</h6>
-              <h6>Price: {item.price}</h6>
+            <div className="list">
+              <h5>Name: {item.name}</h5>
+              <h5>Quantity: {item.quantity}</h5>
+              <h5>Price: {item.price}</h5>
               <hr />
             </div>
           );
