@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;900&display=swap');
-.main-container{
- height: 100vh;
+
+*{
+  overflow: hidden;
 }
 .heading{
   /* background: radial-gradient(circle at 0 0, rgb(243, 167, 44) 40%,rgb(240, 248, 29) 100%, transparent 100%); */
@@ -11,7 +12,7 @@
   font-weight: bold;
 }
 
-.form-container{
+.signup-form-container{
     background-color: transparent;
     width: 400px;
     height:500px;
@@ -21,11 +22,16 @@
     border: 2px solid #000000;
   }
 
-  .form-container:hover{
+  .signup-form-container:hover{
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.7);
-    scale: 1.05;
-    transition: all 1.5s;
-    cursor: pointer;
+  }
+
+  .signup-bg{
+    background: url('./../Assests/bg-login-signup.webp');
+    background-size:cover ;
+    height: 100vh;
+    opacity: 0.8;
+    font-family: "Merriweather", serif;
   }
 
   .user-input{

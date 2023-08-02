@@ -47,7 +47,7 @@ function Login() {
   }
 
   return (
-    <div className="main-container">
+    <div className="row login-bg">
       <div>
          <h1 className='text-center'>Login</h1>
          <div className='row'>
@@ -56,7 +56,7 @@ function Login() {
        </div>
 
        <div className='col-md-6'>
-        <div className='form-container'>
+        <div className='form-container login-form-container'>
           <h3 className="text-center heading">Delicious Garden</h3>
           <form>
     

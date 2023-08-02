@@ -52,7 +52,7 @@ function Signup() {
   }
 
   return (
-    <div className="main-container">
+    <div className="row signup-bg">
       <div>
          <h1 className='text-center'>Signup</h1>
          <div className='row'>
@@ -61,7 +61,7 @@ function Signup() {
        </div>
 
        <div className='col-md-6'>
-        <div className='form-container'>
+        <div className='form-container signup-form-container'>
           <h3 className="text-center heading">Delicious Garden</h3>
           <form>
            <div>
