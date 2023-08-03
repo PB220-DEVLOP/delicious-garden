@@ -47,7 +47,7 @@ function Home() {
   }, [])
 
   return (
-    <div>
+    <div className='overflow-hidden'>
     <Navbar user={currentUser?.name} />
 
     <div className="search-container">

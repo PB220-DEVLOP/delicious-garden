@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;900&display=swap');
 
-*{
-  overflow: hidden;
-}
 .heading{
   /* background: radial-gradient(circle at 0 0, rgb(243, 167, 44) 40%,rgb(240, 248, 29) 100%, transparent 100%); */
   font-size: 35px;
